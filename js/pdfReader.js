@@ -87,7 +87,7 @@ if (DEV_MODE === "structured") {
      // out += `    Race#: ${pp.race}\n`;
       out += `     Glyph: ${pp.glyph}\n`;
       out += `  Distance: ${pp.distance}\n`;
-      out += `   Surface: ${pp.surface}\n`;
+      out += `   Surface: ${pp.surface.sf}${pp.surface.tg}\n`;
 
       out += `    Leader Times:\n`;
       out += `        1c: ${pp.leaderTimes.leader1.raw || ""} ${pp.leaderTimes.leader1.sup || ""}\n`;
@@ -117,7 +117,7 @@ if (DEV_MODE === "structured") {
       out += ` Equipment: ${pp.equipment}\n`
       out += `      Odds: ${pp.odds}\n`
       out += ` Finishers: ${pp.win.wn}${pp.win.lg}${pp.place.pl}${pp.place.lg}${pp.show.sh}${pp.show.lg}\n`
-      out += `  Comments: ${pp.comments}\n`
+      out += `  Comments: ${pp.comment}\n`
       out += `     Field: ${pp.field}\n`
     });
 
