@@ -69,8 +69,8 @@
   <!-- Your JS Files -->
  
    <script type="module">
-  import { readPDFAndDecode } from "./js/pdfReader.js";
-  import { parsePP } from "./js/parsePP.js";
+  import { readPDFAndDecode } from "./js/pdfReadertop.js";
+  import { parseTP } from "./js/parseTP.js";
 
   // When user selects a PDF file, show page count immediately
 document.getElementById("pdfFile").addEventListener("change", async () => {
@@ -89,7 +89,7 @@ document.getElementById("pdfFile").addEventListener("change", async () => {
   const decoded = await readPDFAndDecode(file);
 
   // PHASE 1 parse
-  const structure = parsePP(decoded);
+  const structure = parseTP(decoded);
 
   // Show structure in dev panel
   const out = document.getElementById("devStructureOutput");
